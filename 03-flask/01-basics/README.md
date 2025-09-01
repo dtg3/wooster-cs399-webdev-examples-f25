@@ -19,3 +19,10 @@ flask --app demo run
 ```
 
 For this command, `flask` is the command line program which will execute our code, the `--app` option is where you tell flask which Python source file is the entry point where your `Flask` object is created, and `run` is the command to start the development server.
+
+It is often useful when developing to put Flask in debug mode so that it can reload the application for
+changes and issues.
+
+```bash
+flask --app demo.py run --debug
+```
