@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>My Cool Website Demo</title>
+        <link rel="stylesheet" href="css/site-style.css">
+    </head>
+
+    <body>
+        <!--
+            A span tag is useful if you want to apply a style to a specfic part of 
+            content without altering the rest of it.
+        -->
+        <h1 id="site-heading">Hello <span class="red-text">World!</span></h1>
+
+        <p>I just made a <span class="bold blue">webpage!</span></p>
+        <p>You can find plenty of information about HTML tags from online resources like:</p>
+        
+        <div class="idea">
+            <p>Sometimes you have a great idea.</p>
+            <p class="yellow">The idea burns like the sun!</p>
+        </div>
+
+        
+        <ul>
+            <li>
+                <a href="https://www.w3schools.com/tags/ref_byfunc.asp" target="_blank">W3 Schools HTML Reference Guide By Category</a>
+            </li>
+            <li>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">Mozilla Developer Web Docs</a>
+            </li>
+        </ul>
+
+        <p>There are TONS of ways to use CSS, but you can find a great tutorials and resources:</p>
+        
+        <!--
+            We can use tables to organize content as well.
+            <table> starts a table
+            <tr> defines a row in the table
+            <th> defines the headings for the columns
+            <td> defined table data or the content in each cell
+        -->
+        <table>
+            <tr>
+                <th>Resource</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>MDN Docs</td>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics" target="_blank">https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics</a>
+            </tr>
+            <tr>
+                <td>W3 School (CSS)</td>
+                <td><a href="https://www.w3schools.com/css/" target="_blank">https://www.w3schools.com/css/</a></td>
+            </tr>
+        </table>
+
+        <p>There are also many web frameworks to help with getting your site styled:</p>
+        <ul>
+            <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
+            <li><a href="https://tailwindcss.com/">Tailwind</a></li>
+        </ul>
+        
+        <!-- 
+            Style can be applied inline as an attribute on a tag, but use this sparingly
+            for special circumstances.
+        -->
+        <p>This image is the <span style="font-weight: bold;">actual size</span></p>
+        <div><img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Creative_commons.jpg?20100303185441"></div>
+        <p>These images are scaled by CSS</p>
+        <div><img class="resize" src="img/cs.png"></div>
+        <div><img class="resize" src="https://c.tenor.com/x8v1oNUOmg4AAAAd/rickroll-roll.gif"></div>
+    </body>
+</html>

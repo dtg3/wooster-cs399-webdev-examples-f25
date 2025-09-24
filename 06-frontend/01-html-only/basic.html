@@ -1,0 +1,109 @@
+<!-- 
+    All HTML files need the DOCTYPE declaration
+    at the top of the file. Without it, most 
+    web browsers will go into a type of guessing
+    mode where the will make assumptions about
+    how to parse the document. Explicityly declaring
+    the documents type allows the browser to be more
+    accurate in the way it interprets the file.
+-->
+<!DOCTYPE html>
+
+<!--
+    HTML tags are not case sensitive, so just be
+    consistent. DOCTYPE in most examples of the HTML
+    spec is capitalized due to it's special purpose,
+    but lower case works as well.
+-->
+
+<!-- Indicates the start of an HTML document -->
+<html>
+    <!-- 
+        HTML is a hierarchical document, so we
+        indent accordingly. Tags in between other
+        tags are indented.
+    -->
+
+    <!-- 
+        The head tag defines some properties (metadata) for our HTML document.
+        In this basic case we will supply a title tag to show the name of our
+        site/webpage in our browser. Every html page should have a title.
+    -->
+    <head>
+        <title>My Cool Website Demo</title>
+    </head>
+
+    <!--
+        Indicates the start of content to be rendered
+        on the HTML page by the browser.
+    -->
+    <body>
+
+        <!-- 
+            h1 is a Header1 tag indicates text displayed with
+            a large font size to serve as a sort of title for content.
+            header tags have numbers 1-6 where 1 is largest and 6 is
+            the smallest. Note that the text is inclosed with an end tag
+            which is usually the same tag as a starting tag, but includes
+            a / in between the < and the tag name. Not all tags require
+            end tags.
+        -->
+        <h1>Hello World!</h1>
+
+        <!--
+            p is the paragraph tag which indicates a section of text.
+            Your browser will automatically put a blank line of white space
+            in between content that comes before and after the <p> tag.
+        -->
+        <p>I just made a webpage!</p>
+        <p>
+            You can find plenty of information about HTML tags from online resources like:
+        </p>
+
+        <!-- 
+            Unordered list <ul> shows a bulleted list each <li> is a list item. You can
+            create and ordered list using the <ol> tag and the <li> tags
+        -->
+        <ul>
+            <li>
+                <!-- 
+                    The <a> tag is an anchor. This looks a bit different than the tags we have
+                    seen so far. Achors can link to other websites, or other locations in the same
+                    HTML document. Note the href= and the target= content. HTML tags can have additional
+                    properties called attributes. In the case of the anchor tag, the href attribute 
+                    allows us to provide a URL to another site as a link the text between the <a> tags
+                    is clicked. The target attribute allows us to define behavior when clicking the link.
+                    In this case, we want the link to open in a new tab instead of taking us away from our
+                    current page. The "_blank" value is a documented constant to say open in a new "blank"
+                    tab.
+                -->
+                <a href="https://www.w3schools.com/tags/ref_byfunc.asp" target="_blank">W3 Schools HTML Reference Guide By Category</a>
+            </li>
+            <li>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">Mozilla Developer Web Docs</a>
+            </li>
+        </ul>
+
+        <!-- 
+            The div tag is for division and can create sections in your code. There are other tags to achieve a
+            similar effect, but div implies that we are simply separating content and not that the content is in
+            any way related. Other tags imply a relationship between the content. Like with the p tag, a blank
+            line is added before and after the div tag. Div tags become handy when we want to create stylistic
+            looks for certain sections of the site...more on this later...
+        -->
+        <div>
+            <!-- 
+                The image tag will allow you to embed common image formats into your site. Images can be linked
+                locally to files on your computer/server or via a URL.
+            -->
+            <img src="img/cs.png">
+        </div>
+        <div>
+            <img src="https://c.tenor.com/x8v1oNUOmg4AAAAd/rickroll-roll.gif">
+        </div>
+
+    <!-- Ending Body Tag-->
+    </body>
+
+<!-- End of HTML document-->
+</html> 

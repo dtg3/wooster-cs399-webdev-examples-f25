@@ -1,0 +1,92 @@
+/* This file will contain all the styling for our demo */
+
+/* 
+    This is a normalization rule that provides an alterative
+    box model. If you haven't yet, look at the article on the
+    box model linked on the webpage (https://web.dev/learn/css/box-model).
+    
+    Essentially, select all tags and the space before and after
+    them and apply the border-box sizing model. This means that the
+    calculations for sizing elements is more intuitive as the dimension
+    of a box will be exactly the value I request rather than a sum of the width
+    along with additional border or padding.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    CSS rules are outlined like this
+    [Selector] {property:value; property:value;}
+
+    The rule below says for all p tags, change the font
+    to arial and the color to a dark grey
+*/
+p {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Group Selector */
+/*
+    If multiple elements are going to be styled the same way,
+    you can collapse the rules into a group instead of writing
+    a selector for each one and copying the style.
+*/
+li, td {
+    color: darkorchid;
+} 
+
+/*
+    You can also select specific item in your document
+    in a variety of ways.
+*/
+
+/* id Selector */
+/* 
+    This isn't used very often as IDs in HTML documents are meant
+    to be unique, so this only styles one thing.
+*/
+#site-heading {
+    text-align: center;
+    color:blueviolet;
+}
+
+/* class Selector */
+/* 
+    This is the most common CSS selector as classes don't need
+    to be unique.
+*/
+.red-text {
+    color:red;
+}
+
+/*
+    Chained class Selector
+
+    Must have both the classes "bold blue"
+*/
+.bold.blue {
+    color: blue;
+    font-weight: bold;
+}
+
+/* 
+    Ordered (Descendant) class Selector
+    
+    This will style an element with the class "orange"
+    contained within an element with the class "idea"
+*/
+.idea .orange {
+    color: rgb(255, 153, 0);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* id and class selector */
+img.resize {
+    width:20%;
+    height:20%;
+}
