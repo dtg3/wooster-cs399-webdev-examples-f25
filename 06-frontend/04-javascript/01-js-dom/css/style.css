@@ -1,0 +1,14 @@
+form {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+form div {
+    display: table-row;
+}
+
+form label, form input {
+    display: table-cell;
+    padding: 4px;
+}

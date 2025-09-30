@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>My Cool INTERACTIVE Website Demo</title>
+        <link rel="stylesheet" href="css/style.css">
+        <!-- https://flaviocopes.com/javascript-async-defer/ -->
+        <script defer src="js/constraint_validation.js"></script>
+    </head>
+    <!--
+        HTML tags can support certain actions that can be assigned custom
+        functionality using javascript code. In the case below, when the body
+        of the HTML document is loaded by the browser (onload event), the load()
+        function in javascript is called.
+
+        load() a print statement to your browsers console window and populates the
+        color selection dropdown list dynamically when the body content loads. To
+        see the print statement, you will need to use the developer tools that come
+        with your browser to view the message. If you plan to use HTML as your primary
+        GUI, you will need to become familiar with these built in tools. Console messages
+        can be very useful for debugging.
+    -->
+    <body onload="load()">
+        <h1>Constraint Validation API</h1>
+        <form id="constraint-validation">
+            <p><strong>Create your account</strong></p>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="constraint-email" name="email" required>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="constraint-password" name="password" minlength="8" required>
+            </div>
+            <div>
+                <input type="submit" value="Done">
+            </div>
+        </form>
+    </body>
+</html>

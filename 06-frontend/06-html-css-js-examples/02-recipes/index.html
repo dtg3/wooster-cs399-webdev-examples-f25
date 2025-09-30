@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Recipe Cards</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>My Recipe Book</h1>
+    </header>
+    <main>
+        <form id="recipe-form">
+            <h2>Add a New Recipe</h2>
+            <input type="text" id="recipe-name" placeholder="Recipe Name" required>
+            <input type="text" id="recipe-image" placeholder="Image URL" required>
+            <textarea id="recipe-ingredients" placeholder="Ingredients (comma-separated)" required></textarea>
+            <button type="submit">Add Recipe</button>
+        </form>
+        <section id="recipe-container">
+            </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>

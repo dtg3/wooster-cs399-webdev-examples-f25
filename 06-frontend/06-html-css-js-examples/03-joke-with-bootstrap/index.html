@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dad Joke Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex justify-content-center align-items-center min-vh-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <div class="text-center p-4">
+                    <h1 class="mb-5 text-dark">Dad Joke Generator 😂</h1>
+                    
+                    <div class="card shadow-lg joke-card mb-4">
+                        <div class="card-body d-flex align-items-center justify-content-center">
+                            <p id="joke-text" class="card-text fs-5 text-muted">
+                                Click the button below to get a funny dad joke!
+                            </p>
+                            <!-- Setting the Style here to display:none will not render the content, but it still exists -->
+                            <div id="loading-spinner" class="spinner-border text-warning" role="status" style="display:none;">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="get-joke-btn" class="btn btn-warning btn-lg shadow-sm">
+                        Get a New Joke
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

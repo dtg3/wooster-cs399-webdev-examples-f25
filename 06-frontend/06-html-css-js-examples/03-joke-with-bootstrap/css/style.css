@@ -1,0 +1,17 @@
+/*
+    Most of our CSS is from Bootstrap, but we've added a few rules here to
+    augment the look of our page. This will override any Bootstrap styling
+    because it is loaded AFTER Bootstrap on the HTML page.
+    
+    ORDER MATTERS!
+*/
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #f7f3e9;
+}
+.joke-card {
+    min-height: 120px;
+    /* Override Bootstrap's default background */
+    background-color: #fff9c4 !important;
+    border-color: #ffeb3b !important;
+}
