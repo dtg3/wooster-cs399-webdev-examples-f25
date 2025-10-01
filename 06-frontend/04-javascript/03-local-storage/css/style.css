@@ -1,0 +1,94 @@
+
+html {
+    transition: background-color 1.5s ease;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    background-color: rgb(250, 250, 250);
+    padding: 40px 60px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 600px;
+    
+    /*
+        FOUC mitigation
+        Hide content and prepare for transition
+    */
+    opacity: 0; 
+    transition: opacity 1.5s ease;
+}
+
+/* 
+    FOUC mitigation cont.
+    When our JavaScript code is loaded after the HTML
+    this will get triggered and make the content visible.
+*/
+.is-ready {
+    opacity: 1; 
+}
+
+
+/* Default Theme */
+.theme-default { background-color: #e3f2fd; }
+.theme-default .theme-selector button { background-color: #2196f3; }
+
+/* Green Theme */
+.theme-green { background-color: #e8f5e9; }
+.theme-green .theme-selector button { background-color: #4caf50; }
+
+/* Purple Theme */
+.theme-purple { background-color: #f3e5f5; }
+.theme-purple .theme-selector button { background-color: #9c27b0; }
+
+
+.theme-selector button {
+    color: rgb(250, 250, 250);
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    /* Changes to the opacity property get a 0.3 ease animation */
+    transition: opacity 0.3s ease; 
+}
+
+/* Change the opacity of the buttons to lighten their color */
+.theme-selector button:hover { opacity: 0.8; }
+
+.reset-btn {
+    background-color: #f44336;
+    color: rgb(250, 250, 250);
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    
+    /* Changes to the background color property get a 0.5 ease animation */
+    transition: background-color 0.5s ease;
+}
+
+/* 
+    We use the background color here and not opacity because we are
+    darkening the button.
+*/
+.reset-btn:hover { background-color: #d32f2f; }
+
+.storage-info {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #666;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage Theme</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- inline JavaScript to help avoid FOUC -->
+    <script>
+        const savedTheme = localStorage.getItem('userThemePreference');
+        /* 
+            Apply the saved theme class directly to the HTML tag as soon as possible.
+            We can do this becaues the HTML tag was "seen" by the browser's HTML parser
+            already. See it up there? ----^
+            
+            This gives us the background color for the entire viewport (browser window).
+        */
+        document.documentElement.className = savedTheme ? `theme-${savedTheme}` : 'theme-default';
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome Back!</h1>
+        <p>Your preferred theme is saved locally in your browser. Try closing and reopening this page—the color will remain the same!</p>
+        
+        <div class="theme-selector">
+            <button class="theme-btn" data-theme="default">Default (Blue)</button>
+            <button class="theme-btn" data-theme="green">Forest (Green)</button>
+            <button class="theme-btn" data-theme="purple">Mystic (Purple)</button>
+        </div>
+        
+        <button id="reset-storage-btn" class="reset-btn">Reset All Settings</button>
+        
+        <p class="storage-info">
+            Check your browser's Developer Tools (Application Tab > Local Storage) to see the key-value pair being saved.
+        </p>
+    </div>
+    <!-- 
+        Now that everything is loaded. We can get our external JavaScript loaded.
+    -->
+    <script src="js/script.js"></script>
+</body>
+</html>
