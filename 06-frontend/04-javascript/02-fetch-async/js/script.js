@@ -34,11 +34,16 @@ async function getNewJoke() {
     getJokeBtn.disabled = true; 
     
     // The API doesn't take long, so I will simulate a longer delay
-    //  to demonstrate the effect.
+    //  to demonstrate the effect. You normally won't do this..
     await new Promise(resolve => setTimeout(resolve, 5000));
 
+    /* 
+        The try catch block is used to capture exceptions if
+        somethign goes wrong during the API call (e.g. if the
+        API we requested is unavailable or we make an incorrect
+        request).
+    */
     try {
-        
         /* 
             I can't use the data from the API, until I receive the complete
             response from my request. So I patiently wait for the data, and
