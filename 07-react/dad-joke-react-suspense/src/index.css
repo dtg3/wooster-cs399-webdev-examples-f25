@@ -1,0 +1,11 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #f7f3e9;
+}
+.joke-card {
+    /* Allow the card to resize to fit content, but start at this size */
+    min-height: 120px; 
+    /* Override Bootstrap's default background */
+    background-color: #fff9c4 !important;
+    border-color: #ffeb3b !important;
+}
