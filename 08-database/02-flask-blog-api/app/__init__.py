@@ -4,6 +4,7 @@ from flask import Flask
 from .routes.authors import bp as authors_bp
 from .routes.posts import bp as posts_bp
 from .models.database import init_db, close_db
+from .models.db_seed import seed
 
 # Load environment variables from .flaskenv
 load_dotenv()
@@ -29,6 +30,19 @@ def create_app():
 
     @app.cli.command("initdb")
     def init_database():
-        init_db()
+        with app.app_context():
+            try:
+                init_db()
+            except Exception as e:
+                print(f"Error: {e}")
+        
+
+    @app.cli.command("seed")
+    def seed_database():
+        with app.app_context():
+            try:
+                seed()
+            except Exception as e:
+                print(f"Error: {e}")
 
     return app
