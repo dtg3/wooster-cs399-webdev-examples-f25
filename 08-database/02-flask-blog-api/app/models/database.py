@@ -54,7 +54,11 @@ def get_db():
 # This is registered with the app.teardown_appcontext in __init__.py
 #   When a request is done, this teardown gets called and we will
 #   cleanup our database connection (if we had one).
-def close_db():
+#
+# Since this is used by Flask during teardown we need an optional
+#   parameter for a Flask exception. Often this goes unused, but
+#   is required to be used with Flask.
+def close_db(e=None):
     # Popping db will remove the connection from g
     db = g.pop('db', None)
 
