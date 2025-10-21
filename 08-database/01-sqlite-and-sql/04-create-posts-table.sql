@@ -6,5 +6,5 @@ CREATE TABLE posts (
     title TEXT NOT NULL,
     content TEXT NOT NULL,
     created_at TEXT DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (author_id) REFERENCES user (id) ON DELETE CASCADE
+    FOREIGN KEY (author_id) REFERENCES users (id) ON DELETE CASCADE
 );

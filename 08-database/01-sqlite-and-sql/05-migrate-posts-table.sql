@@ -1,3 +1,4 @@
+INSERT INTO posts (author_id, title, content, created_at)
 SELECT 
 	a.id as author_id,
 	r.post_title as title,
