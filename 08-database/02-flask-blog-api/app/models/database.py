@@ -47,6 +47,10 @@ def get_db():
         #   (but they aren't Python dictionaries) so we
         #   can access the data by the name of the field or column.
         g.db.row_factory = sqlite3.Row
+
+         # This will force sqlite to enforce cascades
+        #   and foreign key contraints.
+        g.db.execute('PRAGMA foreign_keys = ON')
     
     return g.db
 
