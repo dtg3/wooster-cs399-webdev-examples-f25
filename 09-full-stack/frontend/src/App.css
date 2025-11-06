@@ -1,0 +1,169 @@
+/* --- Basic Reset --- */
+/* Makes sure padding/border don't make elements bigger than expected */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Remove default spacing and set basic fonts for the page */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    line-height: 1.5;
+    font-family: Arial, sans-serif; /* Simplified font stack */
+    background-color: #f0f0f0; /* Lighter background */
+    color: #333;
+}
+
+/* Remove link underline and keep default color */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Layout --- */
+
+/* Main box holding the content */
+.page-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto; /* Centers the box */
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ccc; /* Simple border */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Basic shadow */
+}
+
+/* --- Headers and Titles --- */
+h1 {
+    color: #1e88e5;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* --- Navigation Bar --- */
+header {
+    background-color: #1e88e5;
+    padding: 10px 0;
+}
+
+.main-nav {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    gap: 15px;
+}
+
+.main-nav a {
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.main-nav a:hover {
+    background-color: #42a5f5;
+}
+
+/* --- Forms and Inputs --- */
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* --- Buttons --- */
+
+.post-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Primary Button (Green/Success) */
+.btn-primary {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Secondary Button (Grey/Cancel) */
+.btn-secondary {
+    background-color: #ccc;
+    color: #333;
+}
+
+/* Danger Button (Red/Delete) */
+.btn-danger {
+    background-color: #f44336;
+    color: white;
+}
+
+/* --- Post List --- */
+
+.post-list {
+    list-style: none;
+    padding: 0;
+}
+
+.post-item {
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.post-header {
+    /* Basic alignment for title and ID */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.post-header h3 {
+    margin: 0;
+    color: #1e88e5;
+    font-size: 1.1em;
+}
+
+.post-content-text {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.list-button-row {
+    margin-bottom: 20px;
+}
